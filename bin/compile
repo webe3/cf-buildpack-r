@@ -69,6 +69,7 @@ R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/${STACK}/R-${R_VERSION}-binarie
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
 # vendor R into the slug
+echo "CACHE_DIR is $CACHE_DIR, BUILD_DIR is $BUILD_DIR"
 echo "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)" | indent
 
 # Check if we can pull from cache rather than downloading
