@@ -30,9 +30,10 @@ function read_var() {
 unset GIT_DIR
 
 # parse and derive params
-BUILDPACK_DIR="$(dirname $(dirname $0))"
+
 BUILD_DIR=$1
 CACHE_DIR=$2
+BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # ensure exist
 mkdir -p $BUILD_DIR
